@@ -47,7 +47,6 @@ const App = (props) => {
             </ErrorBoundary>
           )}
         </ThemeProvider>
-        s
       </LocalizationProvider>
     </CacheProvider>
   );
