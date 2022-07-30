@@ -40,7 +40,7 @@ function new_login() {
       {
         // redirectTo: "https://sharpshopper-b2b-19s8pw7nq-revedorindia.vercel.app/dashboard",
         // redirectTo: "http://localhost:3000/dashboard",
-        redirectTo: "https://dummy-tan-eight.vercel.app/dashboard",
+        redirectTo: "https://dummy2-sigma.vercel.app/dashboard",
       }
     );
   }
