@@ -1,0 +1,142 @@
+.MainContainer{
+    height: 100vh ;
+    width: screen; 
+    background-color: rgba(21, 23, 25, 1);
+    background-image: url("/static/images/field.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+} 
+
+.Detail_Container{
+     height: 80%; 
+     width: 90%;
+     display: flex; 
+     flex-direction: row;
+} 
+
+.left{
+    flex: 0.6;
+    color: white;
+}  
+
+.left h1{
+    text-align: left;
+    font-size: 50px;
+    font-weight: 700; 
+    color: rgb(80, 72, 229);
+} 
+
+.left h2{
+    text-align: left;
+    margin-top: 40px; 
+    font-size: 46px;
+    font-weight: 500;
+} 
+
+.left h6{
+    color: rgba(255, 255, 255, 0.466); 
+    margin-top: 10px;
+    text-align: left;
+    font-weight: 500; 
+    font-size: 20px;
+}
+
+.right{
+    flex: 0.4;
+    position: relative; 
+}
+
+
+.image_one{
+    background: url("/static/images/ss1.png") no-repeat center content-box;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    width: 90%; 
+    height: 60%; 
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 20px;
+
+} 
+.image_two{
+    background: url("/static/images/ss2.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    width: 90%; 
+    height: 60%; 
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 20px; 
+} 
+
+.bottom{
+    width: screen; 
+    height: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
+.bottom h1{
+    color: white; 
+    font-size: 45px; 
+    text-align: center;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 500px) { 
+
+    .Detail_Container{
+        flex-direction: column-reverse;
+    } 
+
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    } 
+
+    .left h2{
+        font-size:30px; 
+        width: 95%; 
+        text-align: center;
+    } 
+
+    .left h1{
+        font-size: 35px; 
+        text-align: center;
+    } 
+
+    .left h6{
+        font-size: unset;
+    } 
+    
+    .Detail_Container{
+        height: 85%;
+    }
+
+    .bottom{
+        height: 15%; 
+    }
+
+    .bottom h1{
+        font-size: 30px;
+        text-align: center;
+    } 
+
+    .right{
+        flex: 0.6;
+        margin-top: 10px;
+    }   
+    
+}

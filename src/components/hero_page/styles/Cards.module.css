@@ -1,0 +1,26 @@
+.mainContainer{
+    background-color: transparent; 
+    height: 50vh; 
+    width: 40vh; 
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+} 
+
+.ImageContainer{
+    background-color: rgb(80, 72, 229) ; 
+    height: 40px;
+    width: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* @media screen and (max-width: 500px) {
+        .mainContainer{
+            height: 40vh ; 
+            width: 30vh; 
+        }
+} */

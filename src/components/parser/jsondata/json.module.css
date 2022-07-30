@@ -1,0 +1,11 @@
+.items ul {
+  list-style-type: none;
+}
+
+div .data {
+  height: 50vh;
+  width: 46vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 4%;
+}

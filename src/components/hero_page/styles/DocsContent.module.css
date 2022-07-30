@@ -1,0 +1,126 @@
+.mainContainer {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.headingContainer {
+  background: rgba(21, 23, 25, 1);
+  height: 100%;
+  width: 100%;
+  border-top: solid rgba(255, 255, 255, 0.047) 0.01px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  color: rgba(255, 255, 255, 0.853);
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.heading h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.bodyContainer {
+  background: rgba(21, 23, 25, 1);
+  height: 90vh;
+  width: 100%;
+  border-top: solid rgba(255, 255, 255, 0.047) 0.01px;
+  border-left: solid rgba(255, 255, 255, 0.047) 0.01px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 60px;
+  overflow-y: scroll;
+}
+
+/***********************************gettting started page *******************************/
+.GettingStarted {
+  margin-top: 30px;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.GettingStarted li {
+  border: solid white 0.1px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.GettingStarted li:hover {
+  opacity: 100%;
+}
+
+.GettingStarted a {
+  text-decoration: none;
+  color: white;
+}
+
+/* *******************************getting Started ********************* */
+
+.introContainer {
+  height: min-content;
+  width: 80%;
+  border: solid white 0.1px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.introContainer h1 {
+  font-size: 50px;
+  font-weight: 400;
+  color: rgb(80, 72, 229);
+}
+
+.introContainer h2 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.introContainer p {
+  font-size: 18px;
+  opacity: 80%;
+  font-weight: 300;
+}
+
+.SearchApiBracket {
+  background-color: rgb(80, 72, 229);
+  padding: 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.introContainer table {
+  width: 100%;
+}

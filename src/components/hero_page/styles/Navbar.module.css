@@ -1,0 +1,201 @@
+.body_Container{
+    width: screen;  
+    position: sticky ;
+    /* top: 0;*/
+    height: 10vh; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 10px; 
+    background-color: rgba(21, 23, 25, 1); 
+} 
+
+.dataContainer{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 80%;
+} 
+
+.logoContainer{
+    flex: "0.01"; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    padding: 50px; 
+} 
+
+.navContainer {
+    flex: "0.99"; 
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    gap: 50px; 
+}  
+
+.navContainerMobile{
+    height: 40vh;
+    width: 100%;
+    background: rgba(21, 23, 25, 1); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-rows: 1fr; 
+    align-items: center;
+    justify-items: center; 
+    color: white;
+    list-style: none; 
+    transition: transform 0.8s ease-out;
+    transform: translateY(20px);
+}
+
+.navContainerMobile ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;   
+    width: 320px;
+    margin-bottom: 10px;
+}  
+
+@media screen and (min-width: 425px) {
+
+    .navContainerMobile ul{
+        width:425px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    .navContainerMobile ul{
+        width:768px;
+     
+    }
+    
+}
+
+.navContainerMobile li{
+    opacity: 70%;  
+    transition: 0.2s all ease-in ; 
+    cursor: pointer; 
+    border: solid white 0.1px; 
+    padding: 10px;
+    width: 80%; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+.navContainerMobile li:hover{
+    opacity: 100%; 
+}  
+
+.navContainerMobile a{
+    color: white; 
+    text-decoration: none;
+}
+
+.navContainer ul{
+    display: flex; 
+    align-items: center; 
+    gap: 50px;  
+    list-style: none;
+} 
+
+.navContainer li{
+    opacity: 70%;  
+    transition: 0.2s all ease-in ; 
+    cursor: pointer;
+} 
+
+.navContainer li:hover{
+    opacity: 100%; 
+}  
+
+.navContainer a{
+    color: white; 
+    text-decoration: none;
+}
+
+.buttonContainer{
+    padding-left: 10px; 
+    padding-right: 10px; 
+} 
+
+.loginButton{
+    background-color: rgb(80, 72, 229); 
+    color: white; 
+    padding: 8px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    border: none;
+    display: solid; 
+    width: 100%;  
+    transition: 0.2s all ease-in;
+}  
+
+.loginButton:hover{
+   background-color: rgb(75, 71, 161);
+}
+
+.mobileMenuIcons{
+    display: none;
+}
+
+.mobileMenuIconsafter{
+    display: none;
+}
+
+@media screen and (max-width : 768px) {  
+
+    .dataContainer{
+        display: flex;
+        width: screen;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navContainer ul{
+        display: none;
+    } 
+
+    .loginButton{
+        display: none;
+    }
+
+    .mobileMenuIcons{
+        display: unset;
+        display: block; 
+        padding: 5px;  
+        width: 3em;
+        background-color: rgb(80, 72, 229); 
+        color: white; 
+        border-radius: 20%; 
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        cursor: pointer; 
+        transition: 0.2s all ease-in;
+        border: none;
+    } 
+
+    .mobileMenuIcons:hover{
+        background-color: rgb(75, 71, 161);
+     } 
+
+     .mobileMenuIconsafter{
+        background-color: none; 
+     } 
+
+     .buttonContainer{
+        display: none;
+     }
+}
