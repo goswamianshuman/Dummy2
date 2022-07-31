@@ -2,17 +2,17 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Box, Container, Grid } from "@mui/material";
 import { DashboardLayout } from "../components/dashboard-layout";
-import { Quota } from "src/components/dashboard/quota";
-import { Days_left } from "src/components/dashboard/days_left";
 import Pop_up from "./pop_up";
 import { supabase } from "../api/Supabase";
 import Parser from "src/components/parser/Parser";
 import axios from "../api/axios";
 import Csv_upload from "src/components/popups/Csv_upload";
+import { useRouter } from "next/router";
 
 const user = supabase.auth.user();
 
 export default function Dashboard() {
+  const router = useRouter();
   const [opencsvPopup, setCsvOpenPopup] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
 
@@ -44,6 +44,10 @@ export default function Dashboard() {
         console.log(err);
       });
   }
+
+  useEffect(() => {
+    router.reload(window.location.pathname);
+  }, []);
 
   return (
     <>
@@ -93,4 +97,3 @@ export default function Dashboard() {
 }
 
 Dashboard.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
-
