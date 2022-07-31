@@ -1,7 +1,4 @@
-import { useRouter } from "next/router";
 import React from "react";
-
-const router = useRouter();
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,7 +15,7 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     // You can use your own error logging service here
     console.log({ error, errorInfo });
-    router.reload(window.location.pathname);
+    window.location.pathname();
   }
   render() {
     // Check if the error is thrown
