@@ -1,4 +1,7 @@
+import { useRouter } from "next/router";
 import React from "react";
+
+const router = useRouter();
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -7,14 +10,6 @@ class ErrorBoundary extends React.Component {
     // Define a state variable to track whether is an error or not
     this.state = { hasError: false };
   }
-  state = {
-    reload: false,
-  };
-
-  refreshPage = () => {
-    this.setState({ reload: true }, () => this.setState({ reload: false }));
-  };
-
   static getDerivedStateFromError(error) {
     // Update state so the next render will show the fallback UI
 
@@ -23,12 +18,13 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     // You can use your own error logging service here
     console.log({ error, errorInfo });
-    this.refreshPage();
+    router.reload(window.location.pathname);
   }
   render() {
     // Check if the error is thrown
     if (this.state.hasError) {
       // You can render any custom fallback UI
+
       return (
         <div>
           <h2>Oops, there is an error!</h2>

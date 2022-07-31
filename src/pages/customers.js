@@ -4,13 +4,8 @@ import { CustomerListResults } from "../components/customer/customer-list-result
 import { CustomerListToolbar } from "../components/customer/customer-list-toolbar";
 import { DashboardLayout } from "../components/dashboard-layout";
 import { customers } from "../__mocks__/customers";
-import { useRouter } from "next/router";
 
 export default function Customers() {
-  const router = useRouter();
-  useEffect(() => {
-    router.reload(window.location.pathname);
-  }, []);
   return (
     <>
       <Head>
