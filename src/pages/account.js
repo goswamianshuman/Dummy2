@@ -5,6 +5,7 @@ import { AccountUpdates } from "src/components/account/account-profile-updates";
 import { SettingsPassword } from "src/components/settings/settings-password";
 import { AccountProfile } from "src/components/account/account-profile";
 import { AccountProfileDetails } from "src/components/account/account-profile-details";
+import ErrorBoundary from "src/components/ErrorBoundaries";
 
 const user = {
   avatar: "/static/images/avatars/avatar_6.png",
