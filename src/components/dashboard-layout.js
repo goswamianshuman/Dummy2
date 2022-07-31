@@ -20,7 +20,7 @@ export const DashboardLayout = (props) => {
 
  useEffect(() => {
     window.location.reload();
-  }, [children]);
+  }, []);
 
   return (
     <>
