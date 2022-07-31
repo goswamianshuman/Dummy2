@@ -66,6 +66,10 @@ const Account = () => (
   </>
 );
 
-Account.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+Account.getLayout = (page) => (
+  <DashboardLayout>
+    <ErrorBoundary>{page}</ErrorBoundary>
+  </DashboardLayout>
+);
 
 export default Account;
