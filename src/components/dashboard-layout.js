@@ -18,10 +18,6 @@ export const DashboardLayout = (props) => {
   const { children } = props;
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
- useEffect(() => {
-    window.location.reload();
-  }, []);
-
   return (
     <>
       <DashboardLayoutRoot>
@@ -41,4 +37,3 @@ export const DashboardLayout = (props) => {
     </>
   );
 };
-
