@@ -13,13 +13,10 @@ const user = {
   avatar: "/static/images/avatars/avatar_6.png",
 };
 
-const mainUser = supabase.auth.user();
-
 function Account() {
   useEffect(() => {
-    console.log(mainUser.email);
     window.location.reload();
-  }, [mainUser]);
+  }, []);
 
   return (
     <>
