@@ -5,18 +5,42 @@ import { AccountUpdates } from "src/components/account/account-profile-updates";
 import { SettingsPassword } from "src/components/settings/settings-password";
 import { AccountProfile } from "src/components/account/account-profile";
 import { AccountProfileDetails } from "src/components/account/account-profile-details";
-import ErrorBoundary from "src/components/ErrorBoundaries";
-import { supabase } from "src/api/Supabase";
 import { useEffect } from "react";
+import axios from "src/api/axios";
+import { supabase } from "src/api/Supabase";
 
 const user = {
   avatar: "/static/images/avatars/avatar_6.png",
 };
 
+const mainUser = supabase.auth.user();
+
 function Account() {
+  console.log(mainUser);
   useEffect(() => {
-    window.location.reload();
-  }, []);
+    userCheck();
+  }, [mainUser]);
+
+  function userCheck() {
+    console.log(user?.id);
+    const url = `/user_data_check?user_id=${user?.id}`;
+    axios
+      .get(user ? url : null)
+      .then((res) => {
+        console.log(res.data);
+        console.log(res.data.Status);
+        console.log(typeof res.data.Status);
+        if (res.data.Status === false && user?.id === undefined) {
+          console.log("user not registered");
+        }
+        if (user?.id !== undefined) {
+          window.location.reload(false);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   return (
     <>
