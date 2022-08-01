@@ -6,12 +6,21 @@ import { SettingsPassword } from "src/components/settings/settings-password";
 import { AccountProfile } from "src/components/account/account-profile";
 import { AccountProfileDetails } from "src/components/account/account-profile-details";
 import ErrorBoundary from "src/components/ErrorBoundaries";
+import { supabase } from "src/api/Supabase";
+import { useEffect } from "react";
 
 const user = {
   avatar: "/static/images/avatars/avatar_6.png",
 };
 
+const mainUser = supabase.auth.user();
+
 function Account() {
+  useEffect(() => {
+    console.log(mainUser.email);
+    window.location.reload();
+  }, [mainUser]);
+
   return (
     <>
       <Head>
